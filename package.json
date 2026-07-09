@@ -12,7 +12,6 @@
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "autoprefixer": "^10.4.14",
-    "gh-pages": "^6.3.0",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2"
   },
@@ -20,9 +19,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
@@ -35,6 +32,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "https://pun29.github.io/avent-"
+  }
 }

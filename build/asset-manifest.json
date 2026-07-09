@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/avent-/static/css/main.83364d81.css",
-    "main.js": "/avent-/static/js/main.6b951d23.js",
-    "index.html": "/avent-/index.html",
-    "main.83364d81.css.map": "/avent-/static/css/main.83364d81.css.map",
-    "main.6b951d23.js.map": "/avent-/static/js/main.6b951d23.js.map"
+    "main.css": "/avent/static/css/main.83364d81.css",
+    "main.js": "/avent/static/js/main.8c45f094.js",
+    "index.html": "/avent/index.html",
+    "main.83364d81.css.map": "/avent/static/css/main.83364d81.css.map",
+    "main.8c45f094.js.map": "/avent/static/js/main.8c45f094.js.map"
   },
   "entrypoints": [
     "static/css/main.83364d81.css",
-    "static/js/main.6b951d23.js"
+    "static/js/main.8c45f094.js"
   ]
 }
