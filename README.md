@@ -1,97 +1,90 @@
-# Avent — AI-Powered Event Discovery Agent for ASU Students
+# 🎭 Avent — AI-Powered Event Discovery for ASU Students
 
-Avent is an AI-powered event discovery and planning system built for Arizona State University students. It helps students find relevant campus events, generate personalized schedules, and create useful social context such as conversation starters and icebreakers.
+Avent is an intelligent event recommendation platform that helps Arizona State University students discover campus events tailored to their interests. Select events you like, and Avent's multi-agent AI system analyzes your preferences, generates a personalized profile, recommends new events, creates daily schedules, and even suggests conversation icebreakers.
 
-Instead of manually searching across multiple event sources, users enter their interests and preferences once. Avent then runs an automated multi-step workflow using AI agents, APIs, and structured reasoning to return personalized recommendations.
-
----
-
-## What Avent Does
-
-Avent helps students answer questions like:
-
-- What events should I attend this week?
-- Which events match my interests, schedule, and goals?
-- How can I plan my day around campus activities?
-- What should I talk about when I meet people at an event?
-
-The system takes user preferences and turns them into structured, personalized event plans.
+**🔗 [Try it live](https://pun29.github.io/avent-)**
 
 ---
 
-## Key Features
+## How It Works
 
-- **AI-powered event recommendations**
-  - Matches events to user interests, preferences, and goals.
+1. **Browse & Select** — Pick 3+ events from the campus feed that interest you
+2. **AI Analyzes** — Gemini API builds a profile of your interests and preferences
+3. **Get Recommendations** — Receive personalized event suggestions you'd actually enjoy
+4. **Plan Your Day** — AI generates a campus schedule around your recommended events
+5. **Break the Ice** — Get contextual conversation starters for any event
 
-- **Multi-agent workflow**
-  - Uses agent-style reasoning to break the task into smaller steps such as understanding preferences, analyzing event data, and generating final recommendations.
+## Features
 
-- **Personalized daily schedule generation**
-  - Produces structured event plans instead of generic suggestions.
-
-- **Conversation icebreakers**
-  - Generates contextual talking points for selected events.
-
-- **API-driven architecture**
-  - Designed to connect event data sources through REST APIs.
-
-- **Modern frontend**
-  - React-based interface for a clean and interactive user experience.
-
-- **Built with real users in mind**
-  - Designed as a working tool, not just a demo.
-
----
+- **Multi-agent AI pipeline** — Chained Gemini API calls for profile generation, event matching, schedule planning, and icebreaker creation
+- **Dynamic theming** — UI colors adapt based on the dominant club/organizer in your selections
+- **Fallback model support** — Automatic retry with fallback to `gemini-2.5-flash` if the primary model is unavailable
+- **Responsive design** — Built with Tailwind CSS for mobile and desktop
 
 ## Tech Stack
 
-### AI / Automation
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React.js, Tailwind CSS |
+| AI/LLM | Google Gemini API (`gemini-3.5-flash`) |
+| Agent Framework | Multi-step prompt chaining, structured JSON output |
+| Deployment | GitHub Pages |
 
-- Google Gemini API
-- AutoGen
-- Agentic workflows
-- Prompt engineering
-- Structured output generation
+## Architecture
 
-### Backend / Data
+```
+User selects events
+       ↓
+Gemini API: Profile Generation (free-text)
+       ↓
+Gemini API: Event Recommendation (JSON output)
+       ↓
+Gemini API: Daily Schedule Planning (free-text)
+       ↓
+Gemini API: Icebreaker Generation (JSON output)
+       ↓
+Dynamic UI rendering with club-themed colors
+```
 
-- Python
-- REST API integration
-- JSON-based data processing
-- Workflow orchestration logic
+## Local Development
 
-### Frontend
+```bash
+# Clone the repo
+git clone https://github.com/Pun29/avent-.git
+cd avent-
 
-- React.js
-- JavaScript
-- Responsive UI components
+# Install dependencies
+npm install
 
-### Development Tools
+# Add your Gemini API key
+echo "REACT_APP_GEMINI_API_KEY=your_key_here" > .env
 
-- Git / GitHub
-- Claude Code
-- API testing and debugging tools
+# Start the dev server
+npm start
+```
+
+Get a free Gemini API key at [aistudio.google.com](https://aistudio.google.com).
+
+## Screenshots
+
+| Event Discovery | AI Recommendations |
+|---|---|
+| Browse and select campus events | Personalized suggestions with icebreakers |
+
+## What I Learned
+
+- Designing multi-step LLM pipelines with structured JSON output constraints
+- Handling API reliability (retry logic, fallback models, error states)
+- Building dynamic theming systems with CSS custom properties
+- Prompt engineering for consistent, production-quality AI outputs
+
+## Author
+
+**Punarva Bettadamane Channabasappa**
+- [LinkedIn](https://linkedin.com/in/punarva-bc)
+- [GitHub](https://github.com/Pun29)
+- [Portfolio](https://pun29.github.io/punarva-portfolio)
 
 ---
 
-## System Architecture
-
-```text
-User Preferences
-        ↓
-React Frontend
-        ↓
-Backend / API Layer
-        ↓
-Agent Workflow Orchestration
-        ↓
-Event Data Retrieval through APIs
-        ↓
-Gemini API Reasoning
-        ↓
-Personalized Schedule Generation
-        ↓
-Structured Recommendations + Icebreakers
-        ↓
-Frontend Display
+Built as part of the Avent project • MS Computer Science (AI), Arizona State University
