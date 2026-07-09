@@ -2,7 +2,7 @@
 
 Avent is an intelligent event recommendation platform that helps Arizona State University students discover campus events tailored to their interests. Select events you like, and Avent's multi-agent AI system analyzes your preferences, generates a personalized profile, recommends new events, creates daily schedules, and even suggests conversation icebreakers.
 
-**🔗 [Try it live](https://pun29.github.io/avent-)**
+**🔗 [Try it live](https://avent-topaz.vercel.app/)**
 
 ---
 
